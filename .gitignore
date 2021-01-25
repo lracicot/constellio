@@ -43,6 +43,7 @@ sdk/data/
 /sdk/temp-test
 /sdk/sdkpasswords_user.properties
 */bin/
+!/runner/bin
 .gradle/
 tools/gradle/
 /sdk/constellio.log*

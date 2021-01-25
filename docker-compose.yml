@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  constellio:
+    build: .
+    links:
+      - solr
+    environment:
+      - SOLR_URL=http://solr:8983/solr
+      - ADMIN_SERVICE_KEY=adminkey
+      - ADMIN_PASSWORD=password
+    ports:
+      - 8081:8080
+
+  solr:
+    build:
+      context: solr
