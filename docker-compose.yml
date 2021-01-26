@@ -11,7 +11,25 @@ services:
       - ADMIN_PASSWORD=password
     ports:
       - 8081:8080
+    volumes:
+      - ./:/opt/constellio
+      # - ./volumes/constellio/temp:/opt/constellio/temp
 
   solr:
     build:
       context: solr
+    volumes:
+      - ./volumes/solr/records:/opt/solr/server/solr/configsets/records_configs/data
+      - ./volumes/solr/notifications:/opt/solr/server/solr/configsets/notifications_configs/data
+      - ./volumes/solr/events:/opt/solr/server/solr/configsets/events_configs/data
+    ports:
+      - 8983:8983
+    # command:
+    # - bash
+    # - "-c"
+    # - "mkdir -p /var/solr/data; precreate-core events; precreate-core notifications; precreate-core records; solr-foreground"
+    # command:
+    #   - solr-precreate
+    #   - events_configs
+    #   - notifications_configs
+    #   - records_configs

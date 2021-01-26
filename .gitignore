@@ -88,3 +88,4 @@ Supprimerait sdk/ConfigurationRoot/
 /app/src/com/constellio/app/ui/application/widgetset/AppWidgetset.gwt.xml
 /version
 sdk/pluginsJars/
+/volumes
