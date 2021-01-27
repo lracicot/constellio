@@ -89,3 +89,6 @@ Supprimerait sdk/ConfigurationRoot/
 /version
 sdk/pluginsJars/
 /volumes
+/docker/conf/key.txt
+/docker/conf/local-configs.properties
+/docker/conf/settings
