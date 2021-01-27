@@ -31,6 +31,7 @@ COPY runner /opt/constellio/
 COPY --from=builder /home/gradle/webapp /opt/constellio/webapp/
 COPY docker-environment .
 
+RUN mkdir -p /opt/solr/bin/
 RUN echo 'SOLR_JAVA_MEM="-Xms512m -Xmx4096m"' > /opt/solr/bin/solr.in.sh
 
 RUN ["chmod", "+x", "/opt/docker-environment"]
