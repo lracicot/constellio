@@ -27,9 +27,8 @@ RUN ln -s /opt/libreoffice* /opt/libreoffice
 
 EXPOSE 8080
 
-COPY runner /opt/constellio/
+COPY docker /opt/constellio/
 COPY --from=builder /home/gradle/webapp /opt/constellio/webapp/
-COPY docker-environment .
 
 RUN mkdir -p /opt/solr/bin/
 RUN echo 'SOLR_JAVA_MEM="-Xms512m -Xmx4096m"' > /opt/solr/bin/solr.in.sh
@@ -37,5 +36,5 @@ RUN echo 'SOLR_JAVA_MEM="-Xms512m -Xmx4096m"' > /opt/solr/bin/solr.in.sh
 RUN ["chmod", "+x", "/opt/docker-environment"]
 RUN ["chmod", "u+x", "/opt/constellio/startup"]
 
-ENTRYPOINT ["/opt/docker-environment"]
+ENTRYPOINT ["/opt/constellio/docker-environment"]
 CMD ["/opt/constellio/startup", "start"]

@@ -1,0 +1,1371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<types version="9" languages="fr,en" format="3">
+  <type code="collection" id="1" label_fr="Collection" cache="F" inTransactionLog="t">
+    <defaultSchema code="default" id="1" label_fr="Collection">
+      <m code="allReferences" label_fr="Toutes les références" multivalue="t" type="STRING">
+        <dataEntry calculator="com.constellio.model.services.schemas.calculators.AllReferencesCalculator" />
+      </m>
+      <m code="allRemovedAuths" label_fr="Toutes les autorisations retirées" multivalue="t" essential="t" type="STRING">
+        <dataEntry calculator="com.constellio.model.services.schemas.calculators.AllRemovedAuthsCalculator" />
+      </m>
+      <m code="attachedAncestors" label_fr="Ancêtres avec héritage de sécurité" multivalue="t" essential="t" type="STRING">
+        <dataEntry calculator="com.constellio.model.services.schemas.calculators.AttachedAncestorsCalculator2" />
+      </m>
+      <m code="attachedPrincipalAncestorsIntIds" label_fr="Ids dancêtres sécurisés attachés" multivalue="t" essentialInSummary="t" type="INTEGER">
+        <dataEntry calculator="com.constellio.model.services.schemas.calculators.IntegerAttachedPrincipalConceptsAncestorsCalculator" />
+      </m>
+      <m code="autocomplete" label_fr="Champ des termes pour lautocomplétion" multivalue="t" multilingual="t" essential="t" type="STRING">
+        <dataEntry calculator="com.constellio.model.services.schemas.calculators.AutocompleteFieldCalculator" />
+      </m>
+      <m code="caption" label_fr="Libellé" sortable="t" type="STRING" />
+      <m code="code" label_fr="Code" id="1" systemReserved="f" uniqueValue="t" unmodifiable="t" type="STRING" />
+      <m code="conservationCalendarNumber" label_fr="Numéro de calendrier de conservation" id="2" type="STRING" />
+      <m code="createdOn" label_fr="Date de création" sortable="t" type="DATE_TIME" />
+      <m code="deleted" label_fr="Supprimé" type="BOOLEAN" />
+      <m code="denyTokens" label_fr="Jetons de refus" multivalue="t" type="STRING">
+        <validators classNames="com.constellio.model.services.schemas.validators.ManualTokenValidator" />
+      </m>
+      <m code="detachedPrincipalAncestorsIntIds" label_fr="Ids dancêtres sécurisés détachés" multivalue="t" essentialInSummary="t" type="INTEGER">
+        <dataEntry calculator="com.constellio.model.services.schemas.calculators.IntegerDetachedPrincipalConceptsAncestorsCalculator" />
+      </m>
+      <m code="detachedauthorizations" label_fr="Autorisations détachées" type="BOOLEAN" />
+      <m code="errorOnPhysicalDeletion" label_fr="Erreur lors de la suppression physique" type="BOOLEAN" />
+      <m code="estimatedSize" label_fr="Taille estimée de l'enregistrement dans Solr" type="INTEGER" />
+      <m code="hidden" label_fr="Caché" type="BOOLEAN" />
+      <m code="id" label_fr="ID" searchable="t" sortable="t" uniqueValue="t" unmodifiable="t" type="STRING" defaultRequirement="t" />
+      <m code="languages" label_fr="langues" id="3" multivalue="t" systemReserved="f" unmodifiable="t" type="STRING" />
+      <m code="legacyIdentifier" label_fr="Ancien identifiant" searchable="t" uniqueValue="t" unmodifiable="t" type="STRING" defaultRequirement="t" />
+      <m code="logicallyDeletedOn" label_fr="Date suppression" type="DATE_TIME" />
+      <m code="manualTokens" label_fr="Jetons manuels" multivalue="t" type="STRING">
+        <validators classNames="com.constellio.model.services.schemas.validators.ManualTokenValidator" />
+      </m>
+      <m code="markedForParsing" label_fr="Requiert une analyse des données" type="BOOLEAN" />
+      <m code="markedForPreviewConversion" label_fr="Requiert une conversion" type="BOOLEAN" />
+      <m code="markedForReindexing" label_fr="En attente dune réindexation" type="BOOLEAN" />
+      <m code="migrationDataVersion" label_fr="Version de migration" essentialInSummary="t" type="NUMBER" />
+      <m code="modifiedOn" label_fr="Date de modification" sortable="t" type="DATE_TIME" />
+      <m code="name" label_fr="Nom" id="4" systemReserved="f" type="STRING" />
+      <m code="organizationNumber" label_fr="Numéro d''organisme public" id="5" type="STRING" />
+      <m code="path" label_fr="Chemin" multivalue="t" type="STRING">
+        <dataEntry calculator="com.constellio.model.services.schemas.calculators.PathCalculator" />
+      </m>
+      <m code="pathParts" label_fr="Segments de chemins" multivalue="t" type="STRING">
+        <dataEntry calculator="com.constellio.model.services.schemas.calculators.PathPartsCalculator" />
+      </m>
+      <m code="principalAncestorsIntIds" label_fr="Ids dancêtres sécurisés" multivalue="t" essentialInSummary="t" type="INTEGER">
+        <dataEntry calculator="com.constellio.model.services.schemas.calculators.PrincipalAncestorsCalculator" />
+      </m>
+      <m code="principalConceptsIntIds" label_fr="Ids des concepts principaux" multivalue="t" essentialInSummary="t" type="INTEGER">
+        <dataEntry calculator="com.constellio.model.services.schemas.calculators.PrincipalConceptsIntIdsCalculator" />
+      </m>
+      <m code="principalpath" label_fr="Chemin principal" type="STRING">
+        <dataEntry calculator="com.constellio.model.services.schemas.calculators.PrincipalPathCalculator" />
+      </m>
+      <m code="removedauthorizations" label_fr="Autorisations supprimées" multivalue="t" type="STRING" />
+      <m code="schema" label_fr="Format" type="STRING" defaultRequirement="t" />
+      <m code="secondaryConceptsIntIds" label_fr="Ids des concepts secondaires" multivalue="t" essentialInSummary="t" type="INTEGER">
+        <dataEntry calculator="com.constellio.model.services.schemas.calculators.SecondaryConceptsIntIdsCalculator" />
+      </m>
+      <m code="shareDenyTokens" label_fr="Jetons de refus (AD)" multivalue="t" type="STRING">
+        <validators classNames="com.constellio.model.services.schemas.validators.ManualTokenValidator" />
+      </m>
+      <m code="shareTokens" label_fr="Jetons (AD)" multivalue="t" type="STRING">
+        <validators classNames="com.constellio.model.services.schemas.validators.ManualTokenValidator" />
+      </m>
+      <m code="title" label_fr="Titre" searchable="t" schemaAutocomplete="t" systemReserved="f" type="STRING" />
+      <m code="tokens" label_fr="Jetons" multivalue="t" type="STRING">
+        <dataEntry calculator="com.constellio.model.services.schemas.calculators.TokensCalculator2" />
+      </m>
+      <m code="tokensHierarchy" label_fr="Jetons dans la hierarchie" multivalue="t" type="STRING">
+        <dataEntry calculator="com.constellio.model.services.schemas.calculators.DefaultTokensOfHierarchyCalculator" />
+      </m>
+      <m code="visibleInTrees" label_fr="Visible dans larbre" type="BOOLEAN" />
+    </defaultSchema>
+    <customSchemas />
+  </type>
+  <type code="authorizationDetails" id="4" label_fr="Autorisation" cache="F" inTransactionLog="t">
+    <defaultSchema code="default" id="1" label_fr="Autorisation">
+      <m code="allReferences" />
+      <m code="allRemovedAuths" />
+      <m code="attachedAncestors" />
+      <m code="attachedPrincipalAncestorsIntIds" />
+      <m code="autocomplete" />
+      <m code="caption" />
+      <m code="createdBy" label_fr="Créé par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="createdOn" />
+      <m code="deleted" />
+      <m code="denyTokens" />
+      <m code="detachedPrincipalAncestorsIntIds" />
+      <m code="detachedauthorizations" />
+      <m code="endDate" label_fr="Date de fin" id="1" systemReserved="f" type="DATE" />
+      <m code="errorOnPhysicalDeletion" />
+      <m code="estimatedSize" />
+      <m code="hidden" />
+      <m code="id" />
+      <m code="lastTokenRecalculate" label_fr="Dernier recalcul des jetons" id="2" systemReserved="f" type="DATE" />
+      <m code="legacyIdentifier" />
+      <m code="logicallyDeletedOn" />
+      <m code="manualTokens" />
+      <m code="markedForParsing" />
+      <m code="markedForPreviewConversion" />
+      <m code="markedForReindexing" />
+      <m code="migrationDataVersion" />
+      <m code="modifiedBy" label_fr="Modifié par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="modifiedOn" />
+      <m code="negative" label_fr="Négatif?" id="3" undeletable="f" systemReserved="f" type="BOOLEAN" />
+      <m code="overrideInherited" label_fr="Remplace les autorisations héritées" id="4" systemReserved="f" type="BOOLEAN" />
+      <m code="path" />
+      <m code="pathParts" />
+      <m code="principalAncestorsIntIds" />
+      <m code="principalConceptsIntIds" />
+      <m code="principalpath" />
+      <m code="principals" label_fr="Principaux" id="5" undeletable="f" multivalue="t" cacheIndex="t" systemReserved="f" type="STRING" />
+      <m code="removedauthorizations" />
+      <m code="roles" label_fr="Accès/rôles" id="6" multivalue="t" systemReserved="f" type="STRING" defaultRequirement="t" />
+      <m code="schema" />
+      <m code="secondaryConceptsIntIds" />
+      <m code="shareDenyTokens" />
+      <m code="shareTokens" />
+      <m code="sharedBy" label_fr="Partagé par" id="7" undeletable="f" cacheIndex="t" systemReserved="f" type="STRING" />
+      <m code="startDate" label_fr="Date de début" id="8" systemReserved="f" type="DATE" />
+      <m code="synced" label_fr="Synchronisé" id="9" systemReserved="f" type="BOOLEAN" />
+      <m code="target" label_fr="Cible" id="10" cacheIndex="t" systemReserved="f" type="STRING" defaultRequirement="t" />
+      <m code="targetSchemaType" label_fr="Type de schéma de l'enregistrement sécurisé" id="11" systemReserved="f" type="STRING" />
+      <m code="title" />
+      <m code="tokens" />
+      <m code="tokensHierarchy" />
+      <m code="visibleInTrees" />
+    </defaultSchema>
+    <customSchemas />
+  </type>
+  <type code="capsule" id="5" label_fr="Capsule de recherche" cache="F" inTransactionLog="t">
+    <defaultSchema code="default" id="1" label_fr="Capsule de recherche">
+      <m code="allReferences" />
+      <m code="allRemovedAuths" />
+      <m code="attachedAncestors" />
+      <m code="attachedPrincipalAncestorsIntIds" />
+      <m code="autocomplete" />
+      <m code="caption" />
+      <m code="code" label_fr="Code" id="1" undeletable="f" systemReserved="f" type="STRING" />
+      <m code="createdBy" label_fr="Créé par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="createdOn" />
+      <m code="deleted" />
+      <m code="denyTokens" />
+      <m code="detachedPrincipalAncestorsIntIds" />
+      <m code="detachedauthorizations" />
+      <m code="errorOnPhysicalDeletion" />
+      <m code="estimatedSize" />
+      <m code="hidden" />
+      <m code="html" label_fr="Contenu" id="2" undeletable="f" systemReserved="f" type="TEXT" />
+      <m code="id" />
+      <m code="keywords" label_fr="Mots-clés" id="3" undeletable="f" multivalue="t" systemReserved="f" type="STRING" />
+      <m code="legacyIdentifier" />
+      <m code="logicallyDeletedOn" />
+      <m code="manualTokens" />
+      <m code="markedForParsing" />
+      <m code="markedForPreviewConversion" />
+      <m code="markedForReindexing" />
+      <m code="migrationDataVersion" />
+      <m code="modifiedBy" label_fr="Modifié par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="modifiedOn" />
+      <m code="path" />
+      <m code="pathParts" />
+      <m code="principalAncestorsIntIds" />
+      <m code="principalConceptsIntIds" />
+      <m code="principalpath" />
+      <m code="removedauthorizations" />
+      <m code="schema" />
+      <m code="secondaryConceptsIntIds" />
+      <m code="shareDenyTokens" />
+      <m code="shareTokens" />
+      <m code="title" />
+      <m code="tokens">
+        <dataEntry calculator="com.constellio.model.services.schemas.calculators.TokensCalculator4" />
+      </m>
+      <m code="tokensHierarchy" />
+      <m code="visibleInTrees" />
+    </defaultSchema>
+    <customSchemas />
+  </type>
+  <type code="emailToSend" id="6" label_fr="Courriel à envoyer" cache="N" inTransactionLog="t">
+    <defaultSchema code="default" id="1" label_fr="Courriel à envoyer">
+      <m code="BCC" label_fr="Champ BCC" id="1" multivalue="t" systemReserved="f" type="STRUCTURE" structureFactory="com.constellio.model.entities.structures.EmailAddressFactory" />
+      <m code="CC" label_fr="Champ CC" id="2" multivalue="t" systemReserved="f" type="STRUCTURE" structureFactory="com.constellio.model.entities.structures.EmailAddressFactory" />
+      <m code="allReferences" />
+      <m code="allRemovedAuths" />
+      <m code="attachedAncestors" />
+      <m code="attachedPrincipalAncestorsIntIds" />
+      <m code="autocomplete" />
+      <m code="body" label_fr="Corps" id="3" systemReserved="f" type="TEXT" />
+      <m code="caption" />
+      <m code="createdBy" label_fr="Créé par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="createdOn" />
+      <m code="deleted" />
+      <m code="denyTokens" />
+      <m code="detachedPrincipalAncestorsIntIds" />
+      <m code="detachedauthorizations" />
+      <m code="error" label_fr="Erreur" id="4" systemReserved="f" type="STRING" />
+      <m code="errorOnPhysicalDeletion" />
+      <m code="estimatedSize" />
+      <m code="from" label_fr="De" id="5" systemReserved="f" type="STRUCTURE" structureFactory="com.constellio.model.entities.structures.EmailAddressFactory" />
+      <m code="hidden" />
+      <m code="id" />
+      <m code="legacyIdentifier" />
+      <m code="linkedFiles" label_fr="Fichiers joints" id="6" multivalue="t" systemReserved="f" type="CONTENT" structureFactory="com.constellio.model.services.contents.ContentFactory" />
+      <m code="logicallyDeletedOn" />
+      <m code="manualTokens" />
+      <m code="markedForParsing" />
+      <m code="markedForPreviewConversion" />
+      <m code="markedForReindexing" />
+      <m code="migrationDataVersion" />
+      <m code="modifiedBy" label_fr="Modifié par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="modifiedOn" />
+      <m code="parameters" label_fr="Paramètres" id="7" multivalue="t" systemReserved="f" type="STRING" />
+      <m code="path" />
+      <m code="pathParts" />
+      <m code="principalAncestorsIntIds" />
+      <m code="principalConceptsIntIds" />
+      <m code="principalpath" />
+      <m code="removedauthorizations" />
+      <m code="schema" />
+      <m code="secondaryConceptsIntIds" />
+      <m code="sendOn" label_fr="Date d'envoi" id="8" systemReserved="f" type="DATE_TIME" />
+      <m code="shareDenyTokens" />
+      <m code="shareTokens" />
+      <m code="subject" label_fr="Objet" id="9" systemReserved="f" type="STRING" />
+      <m code="template" label_fr="Modèle" id="10" systemReserved="f" type="STRING" />
+      <m code="title" />
+      <m code="to" label_fr="À" id="11" multivalue="t" systemReserved="f" type="STRUCTURE" structureFactory="com.constellio.model.entities.structures.EmailAddressFactory" />
+      <m code="tokens" />
+      <m code="tokensHierarchy" />
+      <m code="tryingCount" label_fr="Nombre d''essai" id="12" systemReserved="f" type="NUMBER" defaultRequirement="t">
+        <defaultValue type="java.lang.Double">0.0</defaultValue>
+      </m>
+      <m code="visibleInTrees" />
+    </defaultSchema>
+    <customSchemas />
+  </type>
+  <type code="event" id="7" label_fr="Événement" cache="N" inTransactionLog="t">
+    <defaultSchema code="default" id="1" label_fr="Événement">
+      <m code="allReferences">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="allRemovedAuths">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="attachedAncestors">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="attachedPrincipalAncestorsIntIds">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="autocomplete">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="batchProcessIdentifier" label_fr="Identifiant du traitement en lot" id="1" systemReserved="f" type="TEXT" />
+      <m code="caption" />
+      <m code="content" label_fr="Rapport" id="2" systemReserved="f" type="CONTENT" structureFactory="com.constellio.model.services.contents.ContentFactory" />
+      <m code="createdBy" label_fr="Créé par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="createdOn" label_fr="Date de l'évènement" />
+      <m code="deleted" />
+      <m code="delta" label_fr="Détails" id="3" systemReserved="f" type="STRING" />
+      <m code="denyTokens" />
+      <m code="detachedPrincipalAncestorsIntIds">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="detachedauthorizations" />
+      <m code="errorOnPhysicalDeletion" />
+      <m code="estimatedSize" />
+      <m code="eventPrincipalPath" label_fr="Chemin principal" id="4" systemReserved="f" type="STRING" />
+      <m code="hidden" />
+      <m code="id" />
+      <m code="ip" label_fr="IP" id="5" systemReserved="f" type="STRING" />
+      <m code="legacyIdentifier" />
+      <m code="logicallyDeletedOn" />
+      <m code="manualTokens" />
+      <m code="markedForParsing" />
+      <m code="markedForPreviewConversion" />
+      <m code="markedForReindexing" />
+      <m code="migrationDataVersion" />
+      <m code="modifiedBy" label_fr="Modifié par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="modifiedOn" label_fr="Date de l'évènement" />
+      <m code="negative" label_fr="Négative?" id="6" systemReserved="f" type="BOOLEAN" />
+      <m code="path">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="pathParts">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="permissionDateRange" label_fr="Dates (permission)" id="7" systemReserved="f" type="STRING" />
+      <m code="permissionRoles" label_fr="Rôles (permission)" id="8" systemReserved="f" type="STRING" />
+      <m code="permissionUsers" label_fr="Utilisateurs (permission)" id="9" systemReserved="f" type="STRING" />
+      <m code="principalAncestorsIntIds">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="principalConceptsIntIds">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="principalpath">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="reason" label_fr="Raison" id="10" systemReserved="f" type="STRING" />
+      <m code="recordIdentifier" label_fr="Identifiant" id="11" systemReserved="f" type="STRING" />
+      <m code="recordVersion" label_fr="Version" id="12" undeletable="f" systemReserved="f" type="STRING" />
+      <m code="removedauthorizations" />
+      <m code="schema" />
+      <m code="secondaryConceptsIntIds">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="shareDenyTokens" />
+      <m code="shareTokens" />
+      <m code="sharedBy" label_fr="Partagé par" id="13" undeletable="f" systemReserved="f" type="STRING" />
+      <m code="title" />
+      <m code="tokens">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="tokensHierarchy">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="totalModifiedRecord" label_fr="Enregistrements modifiés" id="14" systemReserved="f" type="NUMBER" />
+      <m code="type" label_fr="Type" id="15" systemReserved="f" type="STRING" />
+      <m code="userRoles" label_fr="Rôles (utilisateur)" id="16" systemReserved="f" type="STRING" />
+      <m code="username" label_fr="Utilisateur" id="17" systemReserved="f" type="STRING" />
+      <m code="visibleInTrees" />
+    </defaultSchema>
+    <customSchemas />
+  </type>
+  <type code="externalAccessUrl" id="20" label_fr="Url d'accès externe" cache="F" inTransactionLog="t">
+    <defaultSchema code="default" id="1" label_fr="Url d'accès externe">
+      <m code="accessRecord" label_fr="Enregistrement" id="5" systemReserved="f" type="STRING" />
+      <m code="allReferences" label_fr="Toutes les références" />
+      <m code="allRemovedAuths" label_fr="Toutes les autorisations retirées" />
+      <m code="attachedAncestors" label_fr="Ancêtres avec héritage de sécurité" />
+      <m code="attachedPrincipalAncestorsIntIds" label_fr="Ids dancêtres sécurisés attachés" />
+      <m code="autocomplete" label_fr="Champ des termes pour lautocomplétion" />
+      <m code="caption" label_fr="Libellé" />
+      <m code="createdBy" label_fr="Créé par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="createdOn" label_fr="Date de création" />
+      <m code="deleted" label_fr="Supprimé" />
+      <m code="denyTokens" label_fr="Jetons de refus" />
+      <m code="detachedPrincipalAncestorsIntIds" label_fr="Ids dancêtres sécurisés détachés" />
+      <m code="detachedauthorizations" label_fr="Autorisations détachées" />
+      <m code="errorOnPhysicalDeletion" label_fr="Erreur lors de la suppression physique" />
+      <m code="estimatedSize" label_fr="Taille estimée de l'enregistrement dans Solr" />
+      <m code="expirationDate" label_fr="Date d'expiration" id="3" systemReserved="f" type="DATE" />
+      <m code="fullname" label_fr="Nom" id="2" systemReserved="f" type="STRING" />
+      <m code="hidden" label_fr="Caché" />
+      <m code="id" label_fr="ID" />
+      <m code="legacyIdentifier" label_fr="Ancien identifiant" />
+      <m code="logicallyDeletedOn" label_fr="Date suppression" />
+      <m code="manualTokens" label_fr="Jetons manuels" />
+      <m code="markedForParsing" label_fr="Requiert une analyse des données" />
+      <m code="markedForPreviewConversion" label_fr="Requiert une conversion" />
+      <m code="markedForReindexing" label_fr="En attente dune réindexation" />
+      <m code="migrationDataVersion" label_fr="Version de migration" />
+      <m code="modifiedBy" label_fr="Modifié par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="modifiedOn" label_fr="Date de modification" />
+      <m code="path" label_fr="Chemin" />
+      <m code="pathParts" label_fr="Segments de chemins" />
+      <m code="principalAncestorsIntIds" label_fr="Ids dancêtres sécurisés" />
+      <m code="principalConceptsIntIds" label_fr="Ids des concepts principaux" />
+      <m code="principalpath" label_fr="Chemin principal" />
+      <m code="removedauthorizations" label_fr="Autorisations supprimées" />
+      <m code="schema" label_fr="Format" />
+      <m code="secondaryConceptsIntIds" label_fr="Ids des concepts secondaires" />
+      <m code="shareDenyTokens" label_fr="Jetons de refus (AD)" />
+      <m code="shareTokens" label_fr="Jetons (AD)" />
+      <m code="status" label_fr="Statut" id="4" systemReserved="f" type="ENUM" enumClass="com.constellio.model.entities.records.wrappers.structure.ExternalAccessUrlStatus" />
+      <m code="title" label_fr="Titre" />
+      <m code="token" label_fr="Jeton" id="1" systemReserved="f" type="STRING" />
+      <m code="tokens" label_fr="Jetons">
+        <dataEntry calculator="com.constellio.model.services.schemas.calculators.TokensCalculator4" />
+      </m>
+      <m code="tokensHierarchy" label_fr="Jetons dans la hierarchie" />
+      <m code="visibleInTrees" label_fr="Visible dans larbre" />
+    </defaultSchema>
+    <customSchemas />
+  </type>
+  <type code="facet" id="8" label_fr="Facette" cache="F" inTransactionLog="t">
+    <defaultSchema code="default" id="1" label_fr="Facette">
+      <m code="active" label_fr="Actif" id="1" systemReserved="f" type="BOOLEAN">
+        <defaultValue type="java.lang.Boolean">true</defaultValue>
+      </m>
+      <m code="allReferences" />
+      <m code="allRemovedAuths" />
+      <m code="attachedAncestors" />
+      <m code="attachedPrincipalAncestorsIntIds" />
+      <m code="autocomplete" />
+      <m code="caption" />
+      <m code="createdBy" label_fr="Créé par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="createdOn" />
+      <m code="deleted" />
+      <m code="denyTokens" />
+      <m code="detachedPrincipalAncestorsIntIds" />
+      <m code="detachedauthorizations" />
+      <m code="elementPerPage" label_fr="Éléments par page" id="2" systemReserved="f" type="NUMBER" defaultRequirement="t">
+        <defaultValue type="java.lang.Integer">5</defaultValue>
+      </m>
+      <m code="errorOnPhysicalDeletion" />
+      <m code="estimatedSize" />
+      <m code="facetType" label_fr="Type" id="3" systemReserved="f" type="ENUM" defaultRequirement="t" enumClass="com.constellio.model.entities.records.wrappers.structure.FacetType" />
+      <m code="fieldDatastoreCode" label_fr="Code de champs" id="4" systemReserved="f" essential="t" type="STRING" />
+      <m code="hidden" />
+      <m code="id" />
+      <m code="legacyIdentifier" />
+      <m code="logicallyDeletedOn" />
+      <m code="manualTokens" />
+      <m code="markedForParsing" />
+      <m code="markedForPreviewConversion" />
+      <m code="markedForReindexing" />
+      <m code="migrationDataVersion" />
+      <m code="modifiedBy" label_fr="Modifié par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="modifiedOn" />
+      <m code="openByDefault" label_fr="Ouvert par défaut" id="5" systemReserved="f" type="BOOLEAN">
+        <defaultValue type="java.lang.Boolean">true</defaultValue>
+      </m>
+      <m code="order" label_fr="Ordre" id="6" systemReserved="f" type="NUMBER" />
+      <m code="orderResult" label_fr="Ordre des résultats" id="7" systemReserved="f" type="ENUM" defaultRequirement="t" enumClass="com.constellio.model.entities.records.wrappers.structure.FacetOrderType">
+        <defaultValue type="com.constellio.model.entities.records.wrappers.structure.FacetOrderType">R</defaultValue>
+      </m>
+      <m code="pages" label_fr="Nombre de pages" id="8" systemReserved="f" type="NUMBER">
+        <defaultValue type="java.lang.Integer">1</defaultValue>
+      </m>
+      <m code="path" />
+      <m code="pathParts" />
+      <m code="principalAncestorsIntIds" />
+      <m code="principalConceptsIntIds" />
+      <m code="principalpath" />
+      <m code="removedauthorizations" />
+      <m code="schema" />
+      <m code="secondaryConceptsIntIds" />
+      <m code="shareDenyTokens" />
+      <m code="shareTokens" />
+      <m code="title" multilingual="t" defaultRequirement="t" />
+      <m code="tokens" />
+      <m code="tokensHierarchy" />
+      <m code="usedByModule" label_fr="Utilisé par le module" id="9" type="STRING" />
+      <m code="visibleInTrees" />
+    </defaultSchema>
+    <customSchemas>
+      <schema code="field" id="2" label_fr="Champ" undeletable="f" active="t">
+        <m code="fieldValuesLabel" label_fr="Libellés des valeurs de champs" id="10" systemReserved="f" type="STRUCTURE" structureFactory="com.constellio.model.entities.structures.MapStringStringStructureFactory" />
+      </schema>
+      <schema code="query" id="3" label_fr="Requête" undeletable="f" active="t">
+        <m code="listQueries" label_fr="Liste des requêtes" id="11" systemReserved="f" type="STRUCTURE" structureFactory="com.constellio.model.entities.structures.MapStringStringStructureFactory" />
+      </schema>
+    </customSchemas>
+  </type>
+  <type code="globalGroup" id="9" label_fr="init.globalGroup" cache="F" inTransactionLog="t">
+    <defaultSchema code="default" id="1" label_fr="globalGroup">
+      <m code="allReferences" />
+      <m code="allRemovedAuths" />
+      <m code="attachedAncestors" />
+      <m code="attachedPrincipalAncestorsIntIds" />
+      <m code="autocomplete" />
+      <m code="caption" />
+      <m code="code" label_fr="Code" id="1" cacheIndex="t" systemReserved="f" essential="t" uniqueValue="t" type="STRING" defaultRequirement="t" />
+      <m code="collections" label_fr="init.globalGroup.default.collections" id="2" multivalue="t" systemReserved="f" type="STRING" />
+      <m code="createdBy" label_fr="Créé par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="createdOn" />
+      <m code="deleted" />
+      <m code="denyTokens" />
+      <m code="detachedPrincipalAncestorsIntIds" />
+      <m code="detachedauthorizations" />
+      <m code="errorOnPhysicalDeletion" />
+      <m code="estimatedSize" />
+      <m code="hidden" />
+      <m code="hierarchy" label_fr="init.globalGroup.default.hierarchy" id="3" systemReserved="f" type="STRING" />
+      <m code="id" />
+      <m code="legacyIdentifier" />
+      <m code="locallyCreated" label_fr="init.globalGroup.default.locallyCreated" id="4" systemReserved="f" type="BOOLEAN" />
+      <m code="logicallyDeletedOn" />
+      <m code="manualTokens" />
+      <m code="markedForParsing" />
+      <m code="markedForPreviewConversion" />
+      <m code="markedForReindexing" />
+      <m code="migrationDataVersion" />
+      <m code="modifiedBy" label_fr="Modifié par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="modifiedOn" />
+      <m code="name" label_fr="Nom" id="5" systemReserved="f" type="STRING" defaultRequirement="t" />
+      <m code="parent" label_fr="Parent" id="6" cacheIndex="t" systemReserved="f" type="STRING" />
+      <m code="path" />
+      <m code="pathParts" />
+      <m code="principalAncestorsIntIds" />
+      <m code="principalConceptsIntIds" />
+      <m code="principalpath" />
+      <m code="removedauthorizations" />
+      <m code="schema" />
+      <m code="secondaryConceptsIntIds" />
+      <m code="shareDenyTokens" />
+      <m code="shareTokens" />
+      <m code="status" label_fr="Statut" id="7" systemReserved="f" type="ENUM" defaultRequirement="t" enumClass="com.constellio.model.entities.security.global.GlobalGroupStatus" />
+      <m code="title" />
+      <m code="tokens" />
+      <m code="tokensHierarchy" />
+      <m code="visibleInTrees" />
+    </defaultSchema>
+    <customSchemas />
+  </type>
+  <type code="group" id="2" label_fr="Groupe" cache="F" inTransactionLog="t">
+    <defaultSchema code="default" id="1" label_fr="Groupe">
+      <m code="allReferences" />
+      <m code="allRemovedAuths" />
+      <m code="ancestors" label_fr="Ancêtres" id="1" undeletable="f" multivalue="t" systemReserved="f" type="STRING">
+        <dataEntry calculator="com.constellio.model.services.schemas.calculators.GroupAncestorsCalculator" />
+      </m>
+      <m code="attachedAncestors" />
+      <m code="attachedPrincipalAncestorsIntIds" />
+      <m code="autocomplete" />
+      <m code="caption" />
+      <m code="code" label_fr="Code" id="2" cacheIndex="t" schemaAutocomplete="t" systemReserved="f" uniqueValue="t" type="STRING" />
+      <m code="createdOn" />
+      <m code="deleted" />
+      <m code="denyTokens" />
+      <m code="detachedPrincipalAncestorsIntIds" />
+      <m code="detachedauthorizations" />
+      <m code="errorOnPhysicalDeletion" />
+      <m code="estimatedSize" />
+      <m code="hidden" />
+      <m code="id" />
+      <m code="isGlobal" label_fr="Global" id="3" systemReserved="f" type="BOOLEAN" />
+      <m code="legacyIdentifier" />
+      <m code="logicallyDeletedOn" />
+      <m code="manualTokens" />
+      <m code="markedForParsing" />
+      <m code="markedForPreviewConversion" />
+      <m code="markedForReindexing" />
+      <m code="migrationDataVersion" />
+      <m code="modifiedOn" />
+      <m code="parent" label_fr="Parent" id="4" cacheIndex="t" systemReserved="f" type="REFERENCE">
+        <references schemas="group_default" />
+      </m>
+      <m code="path" />
+      <m code="pathParts" />
+      <m code="principalAncestorsIntIds" />
+      <m code="principalConceptsIntIds" />
+      <m code="principalpath" />
+      <m code="removedauthorizations" />
+      <m code="roles" label_fr="Rôles" id="5" multivalue="t" systemReserved="f" type="STRING" />
+      <m code="schema" />
+      <m code="secondaryConceptsIntIds" />
+      <m code="shareDenyTokens" />
+      <m code="shareTokens" />
+      <m code="title" />
+      <m code="tokens" />
+      <m code="tokensHierarchy" />
+      <m code="visibleInTrees" />
+    </defaultSchema>
+    <customSchemas />
+  </type>
+  <type code="printable" id="10" label_fr="Imprimable" cache="F" inTransactionLog="t">
+    <defaultSchema code="default" id="1" label_fr="Imprimable">
+      <m code="allReferences" />
+      <m code="allRemovedAuths" />
+      <m code="attachedAncestors" />
+      <m code="attachedPrincipalAncestorsIntIds" />
+      <m code="autocomplete" />
+      <m code="caption" />
+      <m code="createdBy" label_fr="Créé par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="createdOn" />
+      <m code="deleted" />
+      <m code="denyTokens" />
+      <m code="detachedPrincipalAncestorsIntIds" />
+      <m code="detachedauthorizations" />
+      <m code="errorOnPhysicalDeletion" />
+      <m code="estimatedSize" />
+      <m code="hidden" />
+      <m code="id" />
+      <m code="isdeletable" label_fr="init.printable.default.isdeletable" id="1" systemReserved="f" type="BOOLEAN">
+        <defaultValue type="java.lang.Boolean">true</defaultValue>
+      </m>
+      <m code="jasperfile" label_fr="Fichier Jasper" id="2" systemReserved="f" essential="t" type="CONTENT" defaultRequirement="t" structureFactory="com.constellio.model.services.contents.ContentFactory">
+        <validators classNames="com.constellio.model.services.schemas.validators.JasperFilePrintableValidator" />
+      </m>
+      <m code="legacyIdentifier" />
+      <m code="logicallyDeletedOn" />
+      <m code="manualTokens" />
+      <m code="markedForParsing" />
+      <m code="markedForPreviewConversion" />
+      <m code="markedForReindexing" />
+      <m code="migrationDataVersion" />
+      <m code="modifiedBy" label_fr="Modifié par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="modifiedOn" />
+      <m code="path" />
+      <m code="pathParts" />
+      <m code="principalAncestorsIntIds" />
+      <m code="principalConceptsIntIds" />
+      <m code="principalpath" />
+      <m code="removedauthorizations" />
+      <m code="schema" />
+      <m code="secondaryConceptsIntIds" />
+      <m code="shareDenyTokens" />
+      <m code="shareTokens" />
+      <m code="title" multilingual="t" defaultRequirement="t" />
+      <m code="tokens">
+        <dataEntry calculator="com.constellio.model.services.schemas.calculators.TokensCalculator4" />
+      </m>
+      <m code="tokensHierarchy" />
+      <m code="visibleInTrees" />
+    </defaultSchema>
+    <customSchemas />
+  </type>
+  <type code="report" id="11" label_fr="Rapport" cache="F" inTransactionLog="t">
+    <defaultSchema code="default" id="1" label_fr="Rapport">
+      <m code="allReferences" />
+      <m code="allRemovedAuths" />
+      <m code="attachedAncestors" />
+      <m code="attachedPrincipalAncestorsIntIds" />
+      <m code="autocomplete" />
+      <m code="caption" />
+      <m code="columnsCount" label_fr="Nombre de colonnes" id="1" systemReserved="f" type="NUMBER" />
+      <m code="createdBy" label_fr="Créé par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="createdOn" />
+      <m code="deleted" />
+      <m code="denyTokens" />
+      <m code="detachedPrincipalAncestorsIntIds" />
+      <m code="detachedauthorizations" />
+      <m code="errorOnPhysicalDeletion" />
+      <m code="estimatedSize" />
+      <m code="hidden" />
+      <m code="id" />
+      <m code="legacyIdentifier" />
+      <m code="linesCount" label_fr="Nombre de lignes" id="2" systemReserved="f" type="NUMBER" defaultRequirement="t" />
+      <m code="logicallyDeletedOn" />
+      <m code="manualTokens" />
+      <m code="markedForParsing" />
+      <m code="markedForPreviewConversion" />
+      <m code="markedForReindexing" />
+      <m code="migrationDataVersion" />
+      <m code="modifiedBy" label_fr="Modifié par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="modifiedOn" />
+      <m code="path" />
+      <m code="pathParts" />
+      <m code="principalAncestorsIntIds" />
+      <m code="principalConceptsIntIds" />
+      <m code="principalpath" />
+      <m code="removedauthorizations" />
+      <m code="reportedMetadata" label_fr="Métadonnée rapportée" id="3" multivalue="t" systemReserved="f" type="STRUCTURE" structureFactory="com.constellio.model.entities.records.wrappers.structure.ReportedMetadataFactory" />
+      <m code="schema" />
+      <m code="schemaTypeCode" label_fr="Code du type de schéma" id="4" systemReserved="f" type="STRING" defaultRequirement="t" />
+      <m code="secondaryConceptsIntIds" />
+      <m code="separator" label_fr="Type de séparateur" id="5" systemReserved="f" type="STRING" />
+      <m code="shareDenyTokens" />
+      <m code="shareTokens" />
+      <m code="title" multilingual="t" />
+      <m code="tokens" />
+      <m code="tokensHierarchy" />
+      <m code="username" label_fr="Nom d'utilisateur" id="6" systemReserved="f" type="STRING" />
+      <m code="visibleInTrees" />
+    </defaultSchema>
+    <customSchemas />
+  </type>
+  <type code="savedSearch" id="12" label_fr="Recherche sauvegardée" cache="N" inTransactionLog="t">
+    <defaultSchema code="default" id="1" label_fr="Recherche sauvegardée">
+      <m code="advancedSearch" label_fr="Critères de recherche avancée" id="1" multivalue="t" systemReserved="f" type="STRUCTURE" structureFactory="com.constellio.app.ui.pages.search.criteria.CriterionFactory" />
+      <m code="allReferences">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="allRemovedAuths">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="attachedAncestors">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="attachedPrincipalAncestorsIntIds">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="autocomplete">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="caption" />
+      <m code="createdBy" label_fr="Créé par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="createdOn" />
+      <m code="deleted" />
+      <m code="denyTokens" />
+      <m code="detachedPrincipalAncestorsIntIds">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="detachedauthorizations" />
+      <m code="errorOnPhysicalDeletion" />
+      <m code="estimatedSize" />
+      <m code="facetSelections" label_fr="Facettes" id="2" multivalue="t" systemReserved="f" type="STRUCTURE" structureFactory="com.constellio.app.ui.pages.search.criteria.FacetSelectionsFactory" />
+      <m code="freeTextSearch" label_fr="Critère de recherche" id="3" systemReserved="f" type="STRING" />
+      <m code="hidden" />
+      <m code="id" />
+      <m code="legacyIdentifier" />
+      <m code="logicallyDeletedOn" />
+      <m code="manualTokens" />
+      <m code="markedForParsing" />
+      <m code="markedForPreviewConversion" />
+      <m code="markedForReindexing" />
+      <m code="migrationDataVersion" />
+      <m code="modifiedBy" label_fr="Modifié par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="modifiedOn" />
+      <m code="pageLength" label_fr="Nombre de résultats" id="4" systemReserved="f" type="NUMBER" />
+      <m code="pageNumber" label_fr="init.savedSearch.default.pageNumber" id="5" systemReserved="f" type="NUMBER" />
+      <m code="path">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="pathParts">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="principalAncestorsIntIds">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="principalConceptsIntIds">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="principalpath">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="public" label_fr="Partagée" id="6" systemReserved="f" type="BOOLEAN" />
+      <m code="removedauthorizations" />
+      <m code="restricted" label_fr="Partage restreint" id="7" systemReserved="f" type="BOOLEAN" />
+      <m code="resultsViewMode" label_fr="Mode d'affichage de la recherche" id="8" systemReserved="f" type="STRING">
+        <defaultValue type="java.lang.String">detailed</defaultValue>
+      </m>
+      <m code="schema" />
+      <m code="schemaCodeFilter" label_fr="Filtre sur le schéma" id="9" systemReserved="f" type="STRING" />
+      <m code="schemaFilter" label_fr="Filtre sur le format" id="10" systemReserved="f" type="STRING" />
+      <m code="searchType" label_fr="Type de recherche" id="11" systemReserved="f" type="STRING" />
+      <m code="secondaryConceptsIntIds">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="shareDenyTokens" />
+      <m code="shareTokens" />
+      <m code="sharedGroups" label_fr="Groupes pour le partage" id="12" multivalue="t" systemReserved="f" type="STRING" />
+      <m code="sharedUsers" label_fr="Utilisateurs pour le partage" id="13" multivalue="t" systemReserved="f" type="STRING" />
+      <m code="sortField" label_fr="Champs de tri" id="14" systemReserved="f" type="STRING" />
+      <m code="sortOrder" label_fr="Ordre de tri" id="15" systemReserved="f" type="ENUM" enumClass="com.constellio.model.entities.records.wrappers.SavedSearch$SortOrder" />
+      <m code="temporary" label_fr="init.savedSearch.default.temporary" id="16" systemReserved="f" type="BOOLEAN" />
+      <m code="title" />
+      <m code="tokens">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="tokensHierarchy">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="user" label_fr="Utilisateur" id="17" systemReserved="f" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="visibleInTrees" />
+    </defaultSchema>
+    <customSchemas />
+  </type>
+  <type code="searchEvent" id="13" label_fr="Événement de recherche" dataStore="events" cache="N" inTransactionLog="t">
+    <defaultSchema code="default" id="1" label_fr="Événement de recherche">
+      <m code="allReferences">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="allRemovedAuths">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="attachedAncestors">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="attachedPrincipalAncestorsIntIds">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="autocomplete">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="capsule" label_fr="Capsule" id="1" undeletable="f" multivalue="t" systemReserved="f" type="REFERENCE">
+        <references schemaType="capsule" />
+      </m>
+      <m code="caption" />
+      <m code="clickCount" label_fr="Nombre de clics" id="2" undeletable="f" systemReserved="f" type="NUMBER" />
+      <m code="clicks" label_fr="Clics" id="3" undeletable="f" multivalue="t" systemReserved="f" type="STRING" />
+      <m code="createdBy" label_fr="Créé par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="createdOn" />
+      <m code="deleted" />
+      <m code="denyTokens" />
+      <m code="detachedPrincipalAncestorsIntIds">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="detachedauthorizations" />
+      <m code="dwellTime" label_fr="Durée de consultation" id="4" undeletable="f" systemReserved="f" type="NUMBER">
+        <defaultValue type="java.lang.Integer">0</defaultValue>
+      </m>
+      <m code="errorOnPhysicalDeletion" />
+      <m code="estimatedSize" />
+      <m code="hidden" />
+      <m code="id" />
+      <m code="lastPageNavigation" label_fr="Dernière page consultée" id="5" undeletable="f" systemReserved="f" type="NUMBER" />
+      <m code="legacyIdentifier" />
+      <m code="logicallyDeletedOn" />
+      <m code="manualTokens" />
+      <m code="markedForParsing" />
+      <m code="markedForPreviewConversion" />
+      <m code="markedForReindexing" />
+      <m code="migrationDataVersion" />
+      <m code="modifiedBy" label_fr="Modifié par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="modifiedOn" />
+      <m code="numFound" label_fr="Nombre de résultats" id="6" undeletable="f" systemReserved="f" type="NUMBER" />
+      <m code="originalQuery" label_fr="Requête originale" id="7" undeletable="f" systemReserved="f" type="STRING" />
+      <m code="pageNavigationCount" label_fr="Nombre de changement de page" id="8" undeletable="f" systemReserved="f" type="NUMBER" />
+      <m code="params" label_fr="Paramètres" id="9" undeletable="f" multivalue="t" systemReserved="f" type="STRING" />
+      <m code="path">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="pathParts">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="principalAncestorsIntIds">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="principalConceptsIntIds">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="principalpath">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="qTime" label_fr="Durée de la recherche" id="10" undeletable="f" systemReserved="f" type="NUMBER" />
+      <m code="query" label_fr="Requête" id="11" undeletable="f" systemReserved="f" type="STRING" />
+      <m code="removedauthorizations" />
+      <m code="schema" />
+      <m code="secondaryConceptsIntIds">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="shareDenyTokens" />
+      <m code="shareTokens" />
+      <m code="title" />
+      <m code="tokens">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="tokensHierarchy">
+        <dataEntry>manual</dataEntry>
+      </m>
+      <m code="username" label_fr="Nom d'utilisateur" id="12" undeletable="f" systemReserved="f" type="STRING" />
+      <m code="visibleInTrees" />
+    </defaultSchema>
+    <customSchemas />
+  </type>
+  <type code="task" id="14" label_fr="Task" cache="F" inTransactionLog="t">
+    <defaultSchema code="default" id="1" label_fr="Task">
+      <m code="allReferences" />
+      <m code="allRemovedAuths" />
+      <m code="assignCandidates" label_fr="Les candidats attribués" id="1" multivalue="t" systemReserved="f" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="assignedOn" label_fr="Attribué le" id="2" systemReserved="f" type="DATE_TIME" />
+      <m code="assignedTo" label_fr="Attribué à" id="3" systemReserved="f" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="attachedAncestors" />
+      <m code="attachedPrincipalAncestorsIntIds" />
+      <m code="autocomplete" />
+      <m code="caption" />
+      <m code="createdBy" label_fr="Créé par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="createdOn" />
+      <m code="deleted" />
+      <m code="denyTokens" />
+      <m code="detachedPrincipalAncestorsIntIds" />
+      <m code="detachedauthorizations" />
+      <m code="dueDate" label_fr="Date d'échéance" id="4" systemReserved="f" type="DATE_TIME" />
+      <m code="errorOnPhysicalDeletion" />
+      <m code="estimatedSize" />
+      <m code="finishedBy" label_fr="Terminé par" id="5" systemReserved="f" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="finishedOn" label_fr="Date de fin" id="6" systemReserved="f" type="DATE_TIME" />
+      <m code="hidden" />
+      <m code="id" />
+      <m code="legacyIdentifier" />
+      <m code="logicallyDeletedOn" />
+      <m code="manualTokens" />
+      <m code="markedForParsing" />
+      <m code="markedForPreviewConversion" />
+      <m code="markedForReindexing" />
+      <m code="migrationDataVersion" />
+      <m code="modifiedBy" label_fr="Modifié par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="modifiedOn" />
+      <m code="path" />
+      <m code="pathParts" />
+      <m code="principalAncestorsIntIds" />
+      <m code="principalConceptsIntIds" />
+      <m code="principalpath" />
+      <m code="removedauthorizations" />
+      <m code="schema" />
+      <m code="secondaryConceptsIntIds" />
+      <m code="shareDenyTokens" />
+      <m code="shareTokens" />
+      <m code="title" />
+      <m code="tokens" />
+      <m code="tokensHierarchy" />
+      <m code="visibleInTrees" />
+      <m code="workflowIdentifier" label_fr="Identifiant du workflow" id="7" systemReserved="f" type="STRING" />
+      <m code="workflowRecordIdentifiers" label_fr="Identifiant du record du workflow" id="8" multivalue="t" systemReserved="f" type="STRING" />
+    </defaultSchema>
+    <customSchemas>
+      <schema code="approval" id="2" label_fr="init.task.approval" undeletable="f" active="t">
+        <m code="decision" label_fr="Décision" id="9" systemReserved="f" type="STRING">
+          <validators classNames="com.constellio.model.services.schemas.validators.DecisionValidator" />
+        </m>
+      </schema>
+    </customSchemas>
+  </type>
+  <type code="temporaryRecord" id="15" label_fr="Enregistrements temporaires" cache="F" inTransactionLog="t">
+    <defaultSchema code="default" id="1" label_fr="Enregistrements temporaires">
+      <m code="allReferences" />
+      <m code="allRemovedAuths" />
+      <m code="attachedAncestors" />
+      <m code="attachedPrincipalAncestorsIntIds" />
+      <m code="autocomplete" />
+      <m code="caption" />
+      <m code="content" label_fr="Contenu" id="1" type="CONTENT" structureFactory="com.constellio.model.services.contents.ContentFactory" />
+      <m code="createdBy" label_fr="Créé par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="createdOn" />
+      <m code="daysBeforeDestruction" label_fr="Nombre de jours avant la destruction" id="2" systemReserved="f" type="NUMBER">
+        <defaultValue type="java.lang.Double">7.0</defaultValue>
+        <validators classNames="com.constellio.model.services.schemas.validators.TemporaryRecordValidator" />
+      </m>
+      <m code="deleted" />
+      <m code="denyTokens" />
+      <m code="destructionDate" label_fr="Date de destruction" id="3" type="DATE_TIME">
+        <dataEntry calculator="com.constellio.app.modules.rm.model.calculators.TemporaryRecordDestructionDateCalculator" />
+      </m>
+      <m code="detachedPrincipalAncestorsIntIds" />
+      <m code="detachedauthorizations" />
+      <m code="errorOnPhysicalDeletion" />
+      <m code="estimatedSize" />
+      <m code="hidden" />
+      <m code="id" />
+      <m code="legacyIdentifier" />
+      <m code="logicallyDeletedOn" />
+      <m code="manualTokens" />
+      <m code="markedForParsing" />
+      <m code="markedForPreviewConversion" />
+      <m code="markedForReindexing" />
+      <m code="migrationDataVersion" />
+      <m code="modifiedBy" label_fr="Modifié par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="modifiedOn" />
+      <m code="path" />
+      <m code="pathParts" />
+      <m code="principalAncestorsIntIds" />
+      <m code="principalConceptsIntIds" />
+      <m code="principalpath" />
+      <m code="removedauthorizations" />
+      <m code="schema" />
+      <m code="secondaryConceptsIntIds" />
+      <m code="shareDenyTokens" />
+      <m code="shareTokens" />
+      <m code="title" />
+      <m code="tokens">
+        <dataEntry calculator="com.constellio.model.services.schemas.calculators.TokensCalculator4" />
+      </m>
+      <m code="tokensHierarchy" />
+      <m code="visibleInTrees" />
+    </defaultSchema>
+    <customSchemas>
+      <schema code="batchProcessReport" id="2" label_fr="Rapport de traitement en lot" undeletable="f" active="t">
+        <m code="errors" label_fr="Erreurs" id="4" type="TEXT" />
+        <m code="linkedBatchProcess" label_fr="Traitement en lot lié" id="5" uniqueValue="t" type="STRING" />
+        <m code="skippedRecords" label_fr="Enregistrements ignorés" id="6" multivalue="t" type="STRING" />
+      </schema>
+      <schema code="exportAudit" id="5" label_fr="Audits d'exportation" undeletable="f" active="t">
+        <m code="endDate" label_fr="init.temporaryRecord.exportAudit.endDate" id="9" type="DATE_TIME" />
+      </schema>
+      <schema code="importAudit" id="4" label_fr="Audits d'importation" undeletable="f" active="t">
+        <m code="endDate" label_fr="init.temporaryRecord.importAudit.endDate" id="7" type="DATE_TIME" />
+        <m code="errors" label_fr="Erreurs" id="8" type="TEXT" />
+      </schema>
+      <schema code="scriptReport" id="3" label_fr="Rapport de script" undeletable="f" active="t" />
+    </customSchemas>
+  </type>
+  <type code="thesaurusConfig" id="16" label_fr="Configuration du thesaurus" cache="F" inTransactionLog="t">
+    <defaultSchema code="default" id="1" label_fr="Configuration du thesaurus">
+      <m code="allReferences" />
+      <m code="allRemovedAuths" />
+      <m code="attachedAncestors" />
+      <m code="attachedPrincipalAncestorsIntIds" />
+      <m code="autocomplete" />
+      <m code="caption" />
+      <m code="content" label_fr="Fichier" id="1" type="CONTENT" structureFactory="com.constellio.model.services.contents.ContentFactory" />
+      <m code="createdBy" label_fr="Créé par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="createdOn" />
+      <m code="deleted" />
+      <m code="deniedWord" label_fr="Mots exclus" id="2" multivalue="t" type="STRING" />
+      <m code="denyTokens" />
+      <m code="detachedPrincipalAncestorsIntIds" />
+      <m code="detachedauthorizations" />
+      <m code="errorOnPhysicalDeletion" />
+      <m code="estimatedSize" />
+      <m code="hidden" />
+      <m code="id" />
+      <m code="legacyIdentifier" />
+      <m code="logicallyDeletedOn" />
+      <m code="manualTokens" />
+      <m code="markedForParsing" />
+      <m code="markedForPreviewConversion" />
+      <m code="markedForReindexing" />
+      <m code="migrationDataVersion" />
+      <m code="modifiedBy" label_fr="Modifié par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="modifiedOn" />
+      <m code="path" />
+      <m code="pathParts" />
+      <m code="principalAncestorsIntIds" />
+      <m code="principalConceptsIntIds" />
+      <m code="principalpath" />
+      <m code="removedauthorizations" />
+      <m code="schema" />
+      <m code="secondaryConceptsIntIds" />
+      <m code="shareDenyTokens" />
+      <m code="shareTokens" />
+      <m code="title" />
+      <m code="tokens">
+        <dataEntry calculator="com.constellio.model.services.schemas.calculators.TokensCalculator4" />
+      </m>
+      <m code="tokensHierarchy" />
+      <m code="visibleInTrees" />
+    </defaultSchema>
+    <customSchemas />
+  </type>
+  <type code="user" id="3" label_fr="Utilisateur" cache="F" inTransactionLog="t">
+    <defaultSchema code="default" id="1" label_fr="Utilisateur">
+      <m code="address" label_fr="Adresse" id="1" undeletable="f" systemReserved="f" type="STRING" />
+      <m code="agentEnabled" label_fr="init.user.default.agentEnabled" id="2" undeletable="f" systemReserved="f" type="BOOLEAN">
+        <defaultValue type="java.lang.Boolean">true</defaultValue>
+      </m>
+      <m code="allReferences" />
+      <m code="allRemovedAuths" />
+      <m code="allroles" label_fr="Rôles" id="3" multivalue="t" systemReserved="f" type="STRING">
+        <dataEntry calculator="com.constellio.model.services.schemas.calculators.RolesCalculator" />
+      </m>
+      <m code="attachedAncestors" />
+      <m code="attachedPrincipalAncestorsIntIds" />
+      <m code="autocomplete" />
+      <m code="azureuser" label_fr="Utilisateur azure" id="32" undeletable="f" systemReserved="f" uniqueValue="t" type="STRING" />
+      <m code="caption" />
+      <m code="collectionDeleteAccess" label_fr="Accès de suppression à la collection" id="4" systemReserved="f" type="BOOLEAN" />
+      <m code="collectionReadAccess" label_fr="Accès de lecture à la collection" id="5" systemReserved="f" type="BOOLEAN" />
+      <m code="collectionWriteAccess" label_fr="Accès d'écriture à la collection" id="6" systemReserved="f" type="BOOLEAN" />
+      <m code="createdOn" />
+      <m code="defaultPageLength" label_fr="Nombre de résultats de recherche par défaut" id="7" systemReserved="f" type="ENUM" enumClass="com.constellio.model.entities.enums.SearchPageLength">
+        <defaultValue type="com.constellio.model.entities.enums.SearchPageLength">10</defaultValue>
+      </m>
+      <m code="defaultTabInFolderDisplay" label_fr="init.user.default.defaultTabInFolderDisplay" id="8" systemReserved="f" type="STRING" />
+      <m code="defaultTaxonomy" label_fr="init.user.default.defaultTaxonomy" id="9" systemReserved="f" type="STRING" />
+      <m code="deleted" />
+      <m code="denyTokens" />
+      <m code="detachedPrincipalAncestorsIntIds" />
+      <m code="detachedauthorizations" />
+      <m code="doNotReceiveEmails" label_fr="Ne pas recevoir de courriels" id="10" systemReserved="f" type="BOOLEAN" />
+      <m code="email" label_fr="Courriel" id="11" systemReserved="f" type="STRING">
+        <validators classNames="com.constellio.model.services.schemas.validators.EmailValidator" />
+      </m>
+      <m code="enableFacetsApplyButton" label_fr="Application multiple des facettes" id="12" systemReserved="f" type="BOOLEAN">
+        <defaultValue type="java.lang.Boolean">false</defaultValue>
+      </m>
+      <m code="errorOnPhysicalDeletion" />
+      <m code="estimatedSize" />
+      <m code="fax" label_fr="T�l�copieur" id="13" undeletable="f" systemReserved="f" type="STRING" />
+      <m code="firstname" label_fr="Nom" id="14" systemReserved="f" type="STRING" />
+      <m code="groups" label_fr="Groupes" id="15" multivalue="t" cacheIndex="t" systemReserved="f" type="REFERENCE">
+        <references schemaType="group" />
+      </m>
+      <m code="hidden" />
+      <m code="id" />
+      <m code="jobTitle" label_fr="init.user.default.jobTitle" id="16" systemReserved="f" type="STRING" />
+      <m code="lastIPAddress" label_fr="init.user.default.lastIPAddress" id="17" type="STRING" />
+      <m code="lastLogin" label_fr="init.user.default.lastLogin" id="18" type="DATE_TIME" />
+      <m code="lastname" label_fr="Nom de famille" id="19" systemReserved="f" type="STRING" />
+      <m code="legacyIdentifier" />
+      <m code="logicallyDeletedOn" />
+      <m code="loginLanguageCode" label_fr="init.user.default.loginLanguageCode" id="20" systemReserved="f" type="STRING" />
+      <m code="manualTokens" />
+      <m code="markedForParsing" />
+      <m code="markedForPreviewConversion" />
+      <m code="markedForReindexing" />
+      <m code="migrationDataVersion" />
+      <m code="modifiedOn" />
+      <m code="path" />
+      <m code="pathParts" />
+      <m code="personalEmails" label_fr="Courriels personnels" id="21" undeletable="f" multivalue="t" systemReserved="f" type="STRING" />
+      <m code="phone" label_fr="init.user.default.phone" id="22" systemReserved="f" type="STRING" />
+      <m code="principalAncestorsIntIds" />
+      <m code="principalConceptsIntIds" />
+      <m code="principalpath" />
+      <m code="removedauthorizations" />
+      <m code="schema" />
+      <m code="secondaryConceptsIntIds" />
+      <m code="shareDenyTokens" />
+      <m code="shareTokens" />
+      <m code="signature" label_fr="Signature" id="23" systemReserved="f" type="TEXT" />
+      <m code="startTab" label_fr="init.user.default.startTab" id="24" systemReserved="f" type="STRING" />
+      <m code="status" label_fr="Statut" id="25" systemReserved="f" type="ENUM" enumClass="com.constellio.model.entities.security.global.UserCredentialStatus" />
+      <m code="systemAdmin" label_fr="init.user.default.systemAdmin" id="26" systemReserved="f" type="BOOLEAN" />
+      <m code="taxonomyDisplayOrder" label_fr="Ordre d''affichage des espaces virtuels � l''accueil" id="27" multivalue="t" systemReserved="f" type="STRING" />
+      <m code="title">
+        <dataEntry calculator="com.constellio.model.entities.records.calculators.UserTitleCalculator" />
+      </m>
+      <m code="tokens" />
+      <m code="tokensHierarchy" />
+      <m code="userDocumentSizeSum" label_fr="Taille totale des fichiers sur le bureau" id="28" systemReserved="f" type="NUMBER">
+        <dataEntry agregationType="SUM" referenceMetadata="userDocument_default_user" inputMetadata="userDocument_default_contentSize" />
+      </m>
+      <m code="username" label_fr="Nom d'utilisateur" id="29" cacheIndex="t" systemReserved="f" uniqueValue="t" unmodifiable="t" type="STRING" />
+      <m code="userroles" label_fr="Rôles d'utilisateur" id="30" multivalue="t" systemReserved="f" type="STRING" />
+      <m code="usertokens" label_fr="Jetons" id="31" multivalue="t" systemReserved="f" type="STRING">
+        <dataEntry calculator="com.constellio.model.services.schemas.calculators.UserTokensCalculator2" />
+      </m>
+      <m code="visibleInTrees" />
+    </defaultSchema>
+    <customSchemas />
+  </type>
+  <type code="userCredential" id="17" label_fr="init.userCredential" cache="F" inTransactionLog="t">
+    <defaultSchema code="default" id="1" label_fr="userCredential">
+      <m code="address" label_fr="init.userCredential.default.address" id="1" undeletable="f" systemReserved="f" type="STRING" />
+      <m code="agentStatus" label_fr="init.userCredential.default.agentStatus" id="2" undeletable="f" systemReserved="f" type="ENUM" enumClass="com.constellio.model.entities.security.global.AgentStatus" />
+      <m code="allReferences" />
+      <m code="allRemovedAuths" />
+      <m code="attachedAncestors" />
+      <m code="attachedPrincipalAncestorsIntIds" />
+      <m code="autocomplete" />
+      <m code="azureUsername" label_fr="init.userCredential.default.azureUsername" id="24" undeletable="f" systemReserved="f" uniqueValue="t" type="STRING" />
+      <m code="caption" />
+      <m code="collections" label_fr="init.userCredential.default.collections" id="3" multivalue="t" systemReserved="f" type="STRING" />
+      <m code="createdBy" label_fr="Créé par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="createdOn" />
+      <m code="deleted" />
+      <m code="denyTokens" />
+      <m code="detachedPrincipalAncestorsIntIds" />
+      <m code="detachedauthorizations" />
+      <m code="dn" label_fr="init.userCredential.default.dn" id="4" systemReserved="f" uniqueValue="t" type="STRING" />
+      <m code="doNotReceiveEmails" label_fr="Ne pas recevoir de courriels" id="5" systemReserved="f" type="BOOLEAN" />
+      <m code="domain" label_fr="init.userCredential.default.domain" id="6" systemReserved="f" type="STRING" />
+      <m code="electronicInitials" label_fr="Initiales électronique" id="26" undeletable="f" systemReserved="f" type="CONTENT" structureFactory="com.constellio.model.services.contents.ContentFactory" />
+      <m code="electronicSignature" label_fr="Signature électronique" id="25" undeletable="f" systemReserved="f" type="CONTENT" structureFactory="com.constellio.model.services.contents.ContentFactory" />
+      <m code="email" label_fr="init.userCredential.default.email" id="7" systemReserved="f" type="STRING">
+        <validators classNames="com.constellio.model.services.schemas.validators.EmailValidator" />
+      </m>
+      <m code="errorOnPhysicalDeletion" />
+      <m code="estimatedSize" />
+      <m code="fax" label_fr="init.userCredential.default.fax" id="8" undeletable="f" systemReserved="f" type="STRING" />
+      <m code="firstname" label_fr="init.userCredential.default.firstname" id="9" systemReserved="f" type="STRING" />
+      <m code="globalGroups" label_fr="init.userCredential.default.globalGroups" id="10" multivalue="t" cacheIndex="t" systemReserved="f" type="STRING" />
+      <m code="hasAgreedToPrivacyPolicy" label_fr="A accepté la politique de confidentialité" id="11" systemReserved="f" type="BOOLEAN" />
+      <m code="hasReadLastAlert" label_fr="Derni�re annonce" id="12" systemReserved="f" type="BOOLEAN" />
+      <m code="hidden" />
+      <m code="id" />
+      <m code="jobTitle" label_fr="init.userCredential.default.jobTitle" id="13" undeletable="f" systemReserved="f" type="STRING" />
+      <m code="lastname" label_fr="init.userCredential.default.lastname" id="14" systemReserved="f" type="STRING" />
+      <m code="legacyIdentifier" />
+      <m code="logicallyDeletedOn" />
+      <m code="manualTokens" />
+      <m code="markedForParsing" />
+      <m code="markedForPreviewConversion" />
+      <m code="markedForReindexing" />
+      <m code="migrationDataVersion" />
+      <m code="modifiedBy" label_fr="Modifié par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="modifiedOn" />
+      <m code="msExchangeDelegateList" label_fr="init.userCredential.default.msExchangeDelegateList" id="15" multivalue="t" systemReserved="f" type="STRING" />
+      <m code="path" />
+      <m code="pathParts" />
+      <m code="personalEmails" label_fr="Courriels personnels" id="16" multivalue="t" systemReserved="f" type="STRING" />
+      <m code="phone" label_fr="init.userCredential.default.phone" id="17" undeletable="f" systemReserved="f" type="STRING" />
+      <m code="principalAncestorsIntIds" />
+      <m code="principalConceptsIntIds" />
+      <m code="principalpath" />
+      <m code="removedauthorizations" />
+      <m code="schema" />
+      <m code="secondaryConceptsIntIds" />
+      <m code="serviceKey" label_fr="init.userCredential.default.serviceKey" id="18" cacheIndex="t" systemReserved="f" encrypted="t" uniqueValue="t" type="STRING" />
+      <m code="shareDenyTokens" />
+      <m code="shareTokens" />
+      <m code="status" label_fr="Statut" id="19" systemReserved="f" type="ENUM" defaultRequirement="t" enumClass="com.constellio.model.entities.security.global.UserCredentialStatus" />
+      <m code="systemAdmin" label_fr="init.userCredential.default.systemAdmin" id="20" systemReserved="f" type="BOOLEAN" defaultRequirement="t">
+        <defaultValue type="java.lang.Boolean">false</defaultValue>
+      </m>
+      <m code="title">
+        <dataEntry calculator="com.constellio.model.entities.records.calculators.UserTitleCalculator" />
+      </m>
+      <m code="tokenExpirations" label_fr="init.userCredential.default.tokenExpirations" id="21" multivalue="t" systemReserved="f" type="DATE_TIME" />
+      <m code="tokenKeys" label_fr="init.userCredential.default.tokenKeys" id="22" multivalue="t" systemReserved="f" encrypted="t" type="STRING" />
+      <m code="tokens" />
+      <m code="tokensHierarchy" />
+      <m code="username" label_fr="Nom d'utilisateur" id="23" cacheIndex="t" systemReserved="f" uniqueValue="t" unmodifiable="t" type="STRING" defaultRequirement="t" />
+      <m code="visibleInTrees" />
+    </defaultSchema>
+    <customSchemas />
+  </type>
+  <type code="userDocument" id="18" label_fr="init.userDocument" cache="S" inTransactionLog="t">
+    <defaultSchema code="default" id="1" label_fr="userDocument">
+      <m code="allReferences" />
+      <m code="allRemovedAuths" />
+      <m code="attachedAncestors" />
+      <m code="attachedPrincipalAncestorsIntIds" />
+      <m code="autocomplete" />
+      <m code="caption" />
+      <m code="content" label_fr="init.userDocument.default.content" id="1" searchable="t" systemReserved="f" type="CONTENT" structureFactory="com.constellio.model.services.contents.ContentFactory" />
+      <m code="contentSize" label_fr="Taille du fichier" id="2" systemReserved="f" type="NUMBER">
+        <dataEntry calculator="com.constellio.app.modules.rm.model.calculators.UserDocumentContentSizeCalculator" />
+      </m>
+      <m code="createdBy" label_fr="Créé par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="createdOn" />
+      <m code="deleted" />
+      <m code="denyTokens" />
+      <m code="detachedPrincipalAncestorsIntIds" />
+      <m code="detachedauthorizations" />
+      <m code="errorOnPhysicalDeletion" />
+      <m code="estimatedSize" />
+      <m code="formCreatedOn" label_fr="init.userDocument.default.formCreatedOn" id="3" undeletable="f" systemReserved="f" type="DATE_TIME" />
+      <m code="formModifiedOn" label_fr="init.userDocument.default.formModifiedOn" id="4" undeletable="f" systemReserved="f" type="DATE_TIME" />
+      <m code="hidden" />
+      <m code="id" />
+      <m code="legacyIdentifier" />
+      <m code="logicallyDeletedOn" />
+      <m code="manualTokens" />
+      <m code="markedForParsing" />
+      <m code="markedForPreviewConversion" />
+      <m code="markedForReindexing" />
+      <m code="migrationDataVersion" />
+      <m code="modifiedBy" label_fr="Modifié par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="modifiedOn" />
+      <m code="path" />
+      <m code="pathParts" />
+      <m code="principalAncestorsIntIds" />
+      <m code="principalConceptsIntIds" />
+      <m code="principalpath" />
+      <m code="removedauthorizations" />
+      <m code="schema" />
+      <m code="secondaryConceptsIntIds" />
+      <m code="shareDenyTokens" />
+      <m code="shareTokens" />
+      <m code="title" />
+      <m code="tokens">
+        <dataEntry calculator="com.constellio.model.entities.records.calculators.UserDocumentTokensCalculator" />
+      </m>
+      <m code="tokensHierarchy" />
+      <m code="user" label_fr="init.userDocument.default.user" id="5" cacheIndex="t" systemReserved="f" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="userFolder" label_fr="init.userDocument.default.userFolder" id="6" undeletable="f" cacheIndex="t" systemReserved="f" type="REFERENCE">
+        <references schemaType="userFolder" />
+      </m>
+      <m code="visibleInTrees" />
+    </defaultSchema>
+    <customSchemas />
+  </type>
+  <type code="userFolder" id="19" label_fr="init.userFolder" cache="S" inTransactionLog="t">
+    <defaultSchema code="default" id="1" label_fr="userFolder">
+      <m code="allReferences" />
+      <m code="allRemovedAuths" />
+      <m code="attachedAncestors" />
+      <m code="attachedPrincipalAncestorsIntIds" />
+      <m code="autocomplete" />
+      <m code="caption" />
+      <m code="createdBy" label_fr="Créé par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="createdOn" />
+      <m code="deleted" />
+      <m code="denyTokens" />
+      <m code="detachedPrincipalAncestorsIntIds" />
+      <m code="detachedauthorizations" />
+      <m code="errorOnPhysicalDeletion" />
+      <m code="estimatedSize" />
+      <m code="formCreatedOn" label_fr="init.userFolder.default.formCreatedOn" id="1" undeletable="f" systemReserved="f" type="DATE_TIME" />
+      <m code="formModifiedOn" label_fr="init.userFolder.default.formModifiedOn" id="2" undeletable="f" systemReserved="f" type="DATE_TIME" />
+      <m code="hidden" />
+      <m code="id" />
+      <m code="legacyIdentifier" />
+      <m code="logicallyDeletedOn" />
+      <m code="manualTokens" />
+      <m code="markedForParsing" />
+      <m code="markedForPreviewConversion" />
+      <m code="markedForReindexing" />
+      <m code="migrationDataVersion" />
+      <m code="modifiedBy" label_fr="Modifié par" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="modifiedOn" />
+      <m code="parentUserFolder" label_fr="init.userFolder.default.parentUserFolder" id="3" undeletable="f" systemReserved="f" type="REFERENCE">
+        <references schemaType="userFolder" />
+      </m>
+      <m code="path" />
+      <m code="pathParts" />
+      <m code="principalAncestorsIntIds" />
+      <m code="principalConceptsIntIds" />
+      <m code="principalpath" />
+      <m code="removedauthorizations" />
+      <m code="schema" />
+      <m code="secondaryConceptsIntIds" />
+      <m code="shareDenyTokens" />
+      <m code="shareTokens" />
+      <m code="title" />
+      <m code="tokens">
+        <dataEntry calculator="com.constellio.model.services.schemas.calculators.TokensCalculator4" />
+      </m>
+      <m code="tokensHierarchy" />
+      <m code="user" label_fr="init.userFolder.default.user" id="4" cacheIndex="t" systemReserved="f" essential="t" type="REFERENCE">
+        <references schemaType="user" />
+      </m>
+      <m code="visibleInTrees" />
+    </defaultSchema>
+    <customSchemas />
+  </type>
+</types>

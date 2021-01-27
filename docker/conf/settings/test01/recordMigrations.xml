@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recordMigrations>
+  <schemaType code="folder">
+    <migration version="1" scripts="RMFolderMigrationTo8_1_1_2" />
+  </schemaType>
+  <schemaType code="containerRecord">
+    <migration version="1" scripts="RMContainerRecordMigrationTo7_3" />
+  </schemaType>
+  <schemaType code="document">
+    <migration version="1" scripts="RMDocumentMigrationTo7_6_10,RMEmailMigrationTo7_7_1,RMDocumentMigrationTo9_0" />
+  </schemaType>
+</recordMigrations>

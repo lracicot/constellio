@@ -11,9 +11,9 @@ services:
       - ADMIN_SERVICE_KEY=adminkey
       - ADMIN_PASSWORD=password
     ports:
-      - 8081:8080
+      - 80:8080
     volumes:
-      - ./runner/conf:/opt/constellio/conf
+      - ./docker/conf:/opt/constellio/conf
       - ./volumes/constellio/contents:/opt/constellio/contents
       - ./volumes/constellio/logs:/opt/constellio/logs
       - ./volumes/constellio/transaction_log:/opt/constellio/transaction_log
@@ -21,7 +21,8 @@ services:
 
   solr:
     build:
-      context: solr
+      context: .
+      dockerfile: Dockerfile.solr
     volumes:
       - ./volumes/solr/records:/opt/solr/server/solr/configsets/records_configs/data
       - ./volumes/solr/notifications:/opt/solr/server/solr/configsets/notifications_configs/data

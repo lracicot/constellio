@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <type type="metadata">
+    <field type="metadata" key="title_s" label="Titre">20.0</field>
+  </type>
+  <type type="query" />
+</root>

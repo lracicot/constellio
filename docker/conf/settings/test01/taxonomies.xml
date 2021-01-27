@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taxonomies principal="admUnits">
+  <enables>
+    <taxonomy code="containers">
+      <title titleen="Boxes" titlefr="Emplacements" />
+      <collection>test01</collection>
+      <schemaTypes>
+        <schemaType>storageSpace</schemaType>
+      </schemaTypes>
+      <visibleInHomePage>false</visibleInHomePage>
+      <showParentsInSearchResults>false</showParentsInSearchResults>
+      <groupIds />
+      <userIds />
+    </taxonomy>
+    <taxonomy code="plan">
+      <title titleen="File plan" titlefr="Plan de classification" />
+      <collection>test01</collection>
+      <schemaTypes>
+        <schemaType>category</schemaType>
+      </schemaTypes>
+      <visibleInHomePage>true</visibleInHomePage>
+      <showParentsInSearchResults>false</showParentsInSearchResults>
+      <groupIds />
+      <userIds />
+    </taxonomy>
+    <taxonomy code="admUnits">
+      <title titleen="Departments" titlefr="Unités administratives" />
+      <collection>test01</collection>
+      <schemaTypes>
+        <schemaType>administrativeUnit</schemaType>
+      </schemaTypes>
+      <visibleInHomePage>true</visibleInHomePage>
+      <showParentsInSearchResults>false</showParentsInSearchResults>
+      <groupIds />
+      <userIds />
+    </taxonomy>
+    <taxonomy code="smbFolders">
+      <title titleen="File shares" titlefr="Partages réseaux" />
+      <collection>test01</collection>
+      <schemaTypes>
+        <schemaType>connectorSmbFolder</schemaType>
+      </schemaTypes>
+      <visibleInHomePage>true</visibleInHomePage>
+      <showParentsInSearchResults>false</showParentsInSearchResults>
+      <groupIds />
+      <userIds />
+    </taxonomy>
+  </enables>
+  <disables />
+</taxonomies>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modules>
+  <module id="tasks" enabled_in_collection_test01="true" />
+  <module id="rm" enabled_in_collection_test01="true" />
+  <module id="robots" enabled_in_collection_test01="true" />
+  <module id="restapi" enabled_in_collection_test01="true" />
+  <module id="es" enabled_in_collection_test01="true" />
+  <module id="es_rm_robots" enabled_in_collection_test01="true" />
+  <module id="tasks" enabled_in_collection_test01="true" />
+</modules>
