@@ -43,7 +43,6 @@ sdk/data/
 /sdk/temp-test
 /sdk/sdkpasswords_user.properties
 */bin/
-!/runner/bin
 .gradle/
 tools/gradle/
 /sdk/constellio.log*
@@ -92,3 +91,4 @@ sdk/pluginsJars/
 /docker/conf/key.txt
 /docker/conf/local-configs.properties
 /docker/conf/settings
+!/docker/bin
