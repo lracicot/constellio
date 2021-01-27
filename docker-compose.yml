@@ -12,8 +12,11 @@ services:
     ports:
       - 8081:8080
     volumes:
-      - ./:/opt/constellio
-      # - ./volumes/constellio/temp:/opt/constellio/temp
+      - ./runner/conf:/opt/constellio/conf
+      - ./volumes/constellio/contents:/opt/constellio/contents
+      - ./volumes/constellio/logs:/opt/constellio/logs
+      - ./volumes/constellio/transaction_log:/opt/constellio/transaction_log
+      - ./volumes/constellio/work:/opt/constellio/work
 
   solr:
     build:
@@ -24,12 +27,3 @@ services:
       - ./volumes/solr/events:/opt/solr/server/solr/configsets/events_configs/data
     ports:
       - 8983:8983
-    # command:
-    # - bash
-    # - "-c"
-    # - "mkdir -p /var/solr/data; precreate-core events; precreate-core notifications; precreate-core records; solr-foreground"
-    # command:
-    #   - solr-precreate
-    #   - events_configs
-    #   - notifications_configs
-    #   - records_configs
