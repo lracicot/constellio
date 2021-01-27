@@ -2,8 +2,8 @@ version: '3'
 
 services:
   constellio:
-    image: lracicot/constellio:latest
-    # build: .
+    # image: lracicot/constellio:latest
+    build: .
     links:
       - solr
     environment:
